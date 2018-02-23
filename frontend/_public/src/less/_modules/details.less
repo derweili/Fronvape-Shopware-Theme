@@ -1,0 +1,135 @@
+.is--ctl-detail{
+  .product--details{
+
+    // Product header (Title
+    .product--header {
+      position: relative;
+      float: right;
+      margin: 10px 0px 5px 0px;
+      margin: .625rem 0rem .3125rem 0rem;
+      padding: 0;
+      float: right;
+      right: 0;
+      top: 0;
+      width: 40%;
+    }
+
+    // enlage product image container column
+    .product--image-container{
+      width: 60%;
+      margin: 0;
+    }
+
+    .product--buybox{
+      width: 40%;
+    }
+
+  }
+}
+
+
+.product--details{
+
+  .product--header{
+    .product--title{
+      color: @derweili_black;
+      font-weight: normal;
+    }
+  }
+
+  .product--buybox{
+    .price--content{
+      color: @derweili_black;
+    }
+  }
+
+  .product--tax{
+    color: @derweili_dark_gray;
+    a{
+      color: @derweili_black;
+      text-decoration: underline!important;
+    }
+  }
+
+  // configurator
+  .configurator--form{
+
+    // attribute select field
+    .select-field{
+      max-width: 100%;
+    }
+
+  }
+
+  // quantity select field width
+  .buybox--quantity{
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    margin: 0rem 0rem .625rem 0rem;
+    .select-field{
+      max-width: 100%;
+    }
+  }
+
+  .buybox--button{
+    width: 80%;
+    color: white;
+    background-image: none;
+  }
+
+  // set product actions wrapper to relative so we can position the notepad button absolute
+  nav.product--actions{
+    position: relative;
+    margin-top: 10px;
+  }
+
+  // add to notepad button link
+  button.action--link.link--notepad{
+    padding: 9px 10px 8px 14px;
+    padding: .5625rem .625rem .5rem .875rem;
+    margin: 0px 0px 0px 0px;
+    margin: 0rem 0rem 0rem 0rem;
+    border-radius: 3px;
+    border-radius: .1875rem;
+    top: -62px;
+    top: -3.875rem;
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 18%;
+    height: 42px;
+    height: 2.625rem;
+    .action--text{
+      display: none;
+    }
+  }
+
+
+
+  // Tabs
+  .tab-menu--product{
+    padding: 10px 40px 10px 20px;
+    background-color: @derweili_light_gray;
+  }
+  .tab--navigation{
+    margin-left: 70px;
+    margin-left: 4.375rem;
+  }
+
+  .content--description, .content--product-reviews{
+    padding: 30px 30px 30px 70px;
+    padding: 1.875rem 1.875rem 1.875rem 4.375rem;
+    color: @derweili_dark_gray;
+  }
+
+
+
+}
+
+// product rating coung
+.product--rating-count{
+  background-color: transparent;
+  color: #d8d8d8;
+}

@@ -1,0 +1,43 @@
+
+// Select Field styling
+.js--fancy-select, .select-field select, .js--fancy-select select {
+  border-radius: 0;
+  box-shadow: 0 0 0 transparent;
+  background-color: #fff;
+  border-color: #d8d8d8;
+  background-image: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  max-width: none;
+}
+
+.js--fancy-select .js--fancy-select-trigger, .select-field:after, .select-field::after {
+  width: 18%;
+}
+
+
+// general input style
+textarea, input[type="text"], input[type="search"], input[type="password"], input[type="number"], input[type="email"], input[type="tel"] {
+  border-radius: 0;
+  box-shadow: 0 0 0 transparent;
+  background-color: #fff;
+  border-color: #d8d8d8;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: @derweili_dark_gray;
+  &:focus {
+    color: @derweili_dark_gray;
+  }
+
+  &::placeholder {
+    color: #4a4a4a;
+  }
+
+
+}
+//::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder, ::placeholder { /* Chrome/Opera/Safari */
+//   color: @derweili_dark_gray;
+//   opacity: 1;
+// }
