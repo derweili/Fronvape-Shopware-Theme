@@ -1,10 +1,14 @@
 // Footer Background Color
 .footer-main, .footer-minimal{
   background-color: @derweili_dark_gray;
+  color: @derweili_medium_gray;
+
 }
 .footer-main .container, .footer-minimal .container{
   background-color: @derweili_dark_gray;
+  color: @derweili_medium_gray;
 }
+
 
 
 .footer-main{
@@ -18,5 +22,38 @@
   // hide footer horizontal line
   .footer--columns{
     border-bottom: none;
+  }
+
+  .navigation--link{
+    color: @derweili_medium_gray;
+    &:hover{
+      color: white;
+    }
+  }
+
+  .footer--phone-link{
+    color: @derweili_medium_gray;
+  }
+
+}
+
+.footer-minimal {
+  max-width: 100%;
+  .unitize(padding-top, 20);
+  .unitize(padding-bottom, 30);
+
+  border-bottom: 50px solid @derweili_black;
+}
+
+
+.footer-minimal .footer--service-menu .service--list .service--link{
+  color: @derweili_medium_gray;
+}
+
+
+.footer-minimal .footer--vat-info {
+  color: #6f6f6f;
+  a{
+    color: @derweili_medium_gray;
   }
 }

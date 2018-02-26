@@ -1,4 +1,43 @@
 // Hide breadcrumb border
 .content--breadcrumb{
   border-bottom: none;
+  .unitize(font-size, 13);
+  .unitize-padding(5,0,0,0);
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+
+  @media screen and(min-width: @tabletViewportWidth) {
+    .unitize(font-size, 15);
+    //.unitize(margin-bottom, 20);
+
+  }
+
+  .breadcrumb--link{
+    .unitize(line-height, 16);
+    color: @derweili_medium_gray;
+    text-align: center;
+
+    @media screen and(min-width: @tabletViewportWidth) {
+      color: @derweili_dark_gray;
+
+    }
+
+  }
+
+  // dont float left – use text align for items
+  .breadcrumb--entry, .breadcrumb--separator{
+    float: none;
+  }
+
+  // active breadcrumb link
+  .is--active .breadcrumb--link{
+    color: @derweili_medium_gray;
+    @media screen and(min-width: @tabletViewportWidth) {
+      color: @derweili_dark_gray;
+
+    }
+  }
+  
 }

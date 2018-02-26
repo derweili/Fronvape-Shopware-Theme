@@ -2,26 +2,32 @@
   .product--details{
 
     // Product header (Title
-    .product--header {
-      position: relative;
-      float: right;
-      margin: 10px 0px 5px 0px;
-      margin: .625rem 0rem .3125rem 0rem;
-      padding: 0;
-      float: right;
-      right: 0;
-      top: 0;
-      width: 40%;
+    @media screen and(min-width: @tabletViewportWidth) {
+      .product--header {
+        position: relative;
+        float: right;
+        margin: 10px 0px 5px 0px;
+        margin: .625rem 0rem .3125rem 0rem;
+        padding: 0;
+        float: right;
+        right: 0;
+        top: 0;
+
+        width: 40%;
+      }
     }
 
     // enlage product image container column
-    .product--image-container{
-      width: 60%;
-      margin: 0;
-    }
 
-    .product--buybox{
-      width: 40%;
+    @media screen and(min-width: @tabletViewportWidth) {
+      .product--image-container {
+        width: 60%;
+        margin: 0;
+      }
+
+      .product--buybox {
+        width: 40%;
+      }
     }
 
   }
@@ -110,8 +116,25 @@
 
   // Tabs
   .tab-menu--product{
-    padding: 10px 40px 10px 20px;
-    background-color: @derweili_light_gray;
+
+    @media screen and(min-width: @phoneLandscapeViewportWidth) {
+      background-color: #fff;
+      padding: 10px 40px 10px 20px;
+      background-color: @derweili_light_gray;
+    }
+
+    .js--off-canvas-button{
+      border: none;
+      background-color: @derweili_light_gray;
+      .tab--header{
+        margin-bottom: 0;
+      }
+    }
+
+    .tab--preview{
+      display: none;
+    }
+
   }
   .tab--navigation{
     margin-left: 70px;
@@ -125,11 +148,31 @@
   }
 
 
+  .tab-menu--cross-selling{
+    .tab--container{
+      border: none;
 
+    }
+  }
+
+}
+
+
+.tab--title{
+  color: @derweili_dark_gray;
 }
 
 // product rating coung
 .product--rating-count{
   background-color: transparent;
   color: #d8d8d8;
+}
+
+
+// make cross-sells span across 100% page-width even with sidebar
+@media screen and(min-width: @tabletViewportWidth) {
+  .tab-menu--cross-selling {
+    float: right;
+    width: calc(~"100% + 260px");
+  }
 }

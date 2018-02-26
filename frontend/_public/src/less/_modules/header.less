@@ -17,6 +17,25 @@
 
 // Shop Navigation
 .shop--navigation {
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 7000;
+  .unitize-height(45);
+  background-color: @derweili_black;
+
+  @media screen and(min-width: @tabletViewportWidth) {
+
+    position: relative;
+    width: 70%;
+    float: left;
+    top: initial;
+    background-color: transparent;
+
+  }
+
+
   .navigation--entry .btn {
     background-image: none;
     background-color: transparent;
@@ -48,9 +67,32 @@
 }
 
 
-  .header--navigation{
+.header--navigation{
+
+  position: relative;
+  .unitize-height(100);
+
+
+  @media screen and(min-width: @tabletViewportWidth) {
+
+    .unitize-height(65);
+
+  }
+
 
   .logo-main{
+    .unitize-height(55);
+    .unitize(top, 47);
+    position: relative;
+    width: 100%;
+
+    @media screen and(min-width: @tabletViewportWidth) {
+      top: initial;
+      height: auto;
+      width: 30%;
+
+    }
+
     .logo--shop.block{
       width: 100%;
     }
@@ -67,4 +109,166 @@
       display: block;
     }
   }
+}
+
+
+
+
+// minimal checkout header
+.is--ctl-checkout.is--minimal-header, .is--ctl-register.is--minimal-header, .is--ctl-register.is--minimal-header.is--target-checkout{
+
+  .header-main .header--navigation{
+    .unitize(height, 67);
+  }
+
+
+
+  @media screen and(min-width: @tabletViewportWidth) {
+    .content-main--inner{
+      padding: 0;
+    }
+  }
+
+}
+
+
+
+.is--minimal-header{
+  .header-main{
+    border: none!important;
+
+    a.btn.is--small.btn--back-top-shop.is--icon-left{
+      .unitize(padding-left, 30);
+      .unitize(font-size, 11);
+      .unitize-width(100);
+      .unitize(top, 10);
+      background: none;
+      border: 0;
+      color: @derweili_medium_gray;
+      position: absolute;
+      text-transform: uppercase;
+      left: 0;
+      margin-top: 0;
+      @media screen and(min-width: @tabletViewportWidth) {
+        .unitize(top, 5);
+      }
+
+    }
+
+    .logo--supportinfo{
+      position: absolute;
+      right: 0;
+      top: 0px;
+      color: @derweili_medium_gray;
+      text-align: right;
+      .unitize(font-size, 11);
+      width: 35%;
+    }
+
+  }
+}
+
+
+
+
+.header--navigation .logo-main{
+
+  position: relative;
+  padding: 0;
+  top: 0;
+  .logo--shop.block {
+    width: 50%;
+    float: none;
+    position: relative;
+    .unitize(top, 15);
+    margin: 0 auto;
+    @media screen and(min-width: @tabletViewportWidth) {
+      .unitize(top, 5);
+
+      .logo--link{
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+
+
+// checkout steps
+.steps--container{
+  background-color: @derweili_black;
+  max-width: 100%;
+}
+.steps--content{
+  .unitize(max-width, 1260);
+  .unitize-height(36);
+  .unitize(padding-top, 5);
+  .unitize(5);
+  border: none;
+  color: @derweili_medium_gray;
+  margin: 0 auto;
+  .unitize-padding(5, 10);
+
+  @media screen and(min-width: @tabletViewportWidth) {
+    .unitize-padding(5, 0);
+
+  }
+
+
+  .steps--entry{
+    display: none;
+    @media screen and(min-width: @tabletViewportWidth) {
+      display: inline-block;
+    }
+
+    &.is--active{
+      display: block;
+      .text{
+        color: white;
+      }
+      @media screen and(min-width: @tabletViewportWidth) {
+        display: table-cell;
+      }
+    }
+
+    @media screen and(min-width: @tabletViewportWidth) {
+      width: 30%;
+      display: table-cell;
+
+      &.steps--spacer{
+        width: 3%;
+      }
+    }
+
+
+    .icon{
+      .unitize(font-size, 13);
+      .unitize(line-height, 24);
+      background: none;
+      color: white;
+      border-radius: unset;
+      padding: 0;
+      width: auto;
+      height: 26px;
+      //display: inline-block;
+      display: none;
+    }
+
+    .text{
+      .unitize(font-size, 13);
+      height: auto;
+      text-align: center;
+      font-weight: 700;
+      color: @derweili_medium_gray;
+      text-transform: uppercase;
+
+    }
+
+  }
+
+  .steps--entry .text{
+
+  }
+
 }

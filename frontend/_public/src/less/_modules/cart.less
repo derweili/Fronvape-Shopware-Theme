@@ -1,0 +1,44 @@
+.is--ctl-checkout{
+
+    .product--table{
+      .table--tr{
+        .column--actions{
+          .column--actions-link{
+            border: none;
+          }
+        }
+      }
+
+      .table--media{
+        .table--media-outer{
+          border: none;
+        }
+      }
+
+      @media screen and(min-width: @tabletViewportWidth) {
+
+        // remove border around cart table
+        .panel--body{
+          border: none;
+        }
+
+        // remove border/line between product list and cart sub-totals
+        .basket--footer{
+          border: none;
+        }
+
+      }
+
+    }
+
+  .confirm--content form#confirm--form .panel{
+    background: @derweili_light_gray;
+    .unitize-padding(20, 20, 10, 20);
+  }
+
+}
+
+.content--confirm .confirm--inner-container .has--border{
+  border: none
+}
+
